@@ -153,8 +153,7 @@ string convertStringToInt(string something, float x)
 				if (leftNumber[0] == 'i') leftNumber[0] = '-';
 
 				float irightNumber = stof(rightNumber), ileftNumber = stof(leftNumber);
-				float answer = arithmeticOperationsConvert(ileftNumber, irightNumber, operation);
-				string sAnswer = to_string(answer);
+				string sAnswer = to_string(arithmeticOperationsConvert(ileftNumber, irightNumber, operation));
 				if (sAnswer[0] == '-') sAnswer[0] = 'i';
 				if(leftBracket==0) something.replace(leftBracket, rightBracket, sAnswer);
 				else something.replace(leftBracket+1, rightBracket-leftBracket-1, sAnswer);
